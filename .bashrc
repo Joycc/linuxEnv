@@ -48,7 +48,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 #if [ "$color_prompt" = yes ]; then
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\>>'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\>>'
 #else
 #    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 #fi
@@ -145,10 +145,12 @@ extract() {
     return $e
 }
 
-#export http_proxy=http://proxy01.cd.intel.com:911
-#export https_proxy=https://proxy01.cd.intel.com:911
-#export no_proxy=.intel.com
+export http_proxy=http://child-prc.intel.com:913
+export https_proxy=http://child-prc.intel.com:913
+export no_proxy=.intel.com
 
+export npm_config_http_proxy=http://child-prc.intel.com:913
+export npm_config_https_proxy=https://child-prc.intel.com:913
 #export PATH=$PATH:/var/lib/gems/1.8/bin/
 #alias snboss='ssh root@newboss'
 #alias sbobs='ssh root@bossobs'
@@ -157,14 +159,19 @@ extract() {
 #alias snobs='ssh root@newobs-testing'
 #alias obs2='ssh root@obs2'
 
-export JAVA_HOME=/home/joycc/jdk1.6.0
-export JRE_HOME=$JAVA_HOME/jre    
-export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH    
-export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH  
+export JAVA_HOME=/home/joycc/jdk1.8.0_65
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=./:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$WEKAROOT/weka-old.jar:
+#$WEKAROOT/packageManager.jar:$WEKAROOT/junit.jar:$WEKAROOT/JFlex.jar:$WEKAROOT/java-cup.jar
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH:$HOME/bin
 export GOROOT=$HOME/下载/go
-export PATH=$GOROOT/bin:$PATH:$GOPATH/bin
+export PATH=$GOROOT/bin:$PATH:$GOPATH/bin:/home/joycc/testpython-jar:$CLASSPATH
 export GOPATH=$HOME/gomy
 export NODE_PATH=/usr/local/lib/node_modules/npm/node_modules
+export WEKAROOT=/home/intel/work/weka-3-7-13
+#export JAVA_HOME=/usr/java/
+export BIGML_USERNAME=joycc
+export BIGML_API_KEY=9d05f8665b8975611cdc0774d0cbe3203c9bdd7e
 
 
 
