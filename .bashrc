@@ -145,9 +145,9 @@ extract() {
     return $e
 }
 
-export http_proxy=http://child-prc.intel.com:913
-export https_proxy=http://child-prc.intel.com:913
-export no_proxy=.intel.com
+#export http_proxy=http://child-prc.intel.com:913
+#export https_proxy=http://child-prc.intel.com:913
+#export no_proxy=.intel.com
 
 export npm_config_http_proxy=http://child-prc.intel.com:913
 export npm_config_https_proxy=https://child-prc.intel.com:913
@@ -172,6 +172,7 @@ export WEKAROOT=/home/intel/work/weka-3-7-13
 #export JAVA_HOME=/usr/java/
 export BIGML_USERNAME=joycc
 export BIGML_API_KEY=9d05f8665b8975611cdc0774d0cbe3203c9bdd7e
+export DISPLAY=localhost:0.0
 
 
 
