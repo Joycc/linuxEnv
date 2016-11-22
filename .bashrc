@@ -145,12 +145,24 @@ extract() {
     return $e
 }
 
+<<<<<<< HEAD
 #export http_proxy=http://child-prc.intel.com:913
 #export https_proxy=http://child-prc.intel.com:913
 #export no_proxy=.intel.com
 
 export npm_config_http_proxy=http://child-prc.intel.com:913
 export npm_config_https_proxy=https://child-prc.intel.com:913
+=======
+export http_proxy=http://172.16.100.191:8080
+export https_proxy=http://172.16.100.191:8080
+#export https_proxy=http://10.89.153.205:8080
+#export https_proxy=http://10.89.153.205:8080
+#export https_proxy=http://10.89.155.155:8080
+#export no_proxy=.intel.com
+#
+#export npm_config_http_proxy=http://child-prc.intel.com:913
+#export npm_config_https_proxy=https://child-prc.intel.com:913
+>>>>>>> add ls colors
 #export PATH=$PATH:/var/lib/gems/1.8/bin/
 #alias snboss='ssh root@newboss'
 #alias sbobs='ssh root@bossobs'
@@ -174,6 +186,8 @@ export BIGML_USERNAME=joycc
 export BIGML_API_KEY=9d05f8665b8975611cdc0774d0cbe3203c9bdd7e
 export DISPLAY=localhost:0.0
 
+# fix ls colors
+export LS_COLORS='no=00:fi=00:di=01;33:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;35:*.cmd=01;35:*.exe=01;35:*.com=01;35:*.btm=01;35:*.bat=01;35:*.sh=01;35:*.csh=01;35:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:'
 
 
 alias tmux='TERM=xterm-256color tmux'
@@ -183,3 +197,4 @@ alias startwirshark='/home/joycc/wireshark/wireshark-1.10.6/wireshark'
 alias edisonGo='sudo screen /dev/ttyUSB0 115200'
 alias edisonSSH='ssh root@192.168.1.139'
 alias serverSSH='ssh archermind@27.17.61.58'
+
